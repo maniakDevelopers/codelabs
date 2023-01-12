@@ -28,5 +28,73 @@ abstract class PowerUp extends SpriteComponent
 }
 
 // Powerups: Add Rocket class
+class Rocket extends PowerUp {
+  @override
+  double get jumpSpeedMultiplier => 3.5;
+
+  Rocket({
+    super.position,
+  });
+
+  @override
+  Future<void>? onLoad() async {
+    await super.onLoad();
+    sprite = await gameRef.loadSprite('game/rocket_1.png');
+    size = Vector2(50, 70);
+  }
+}
 
 // Powerups: Add NooglerHat class
+class NooglerHat extends PowerUp {
+  @override
+  double get jumpSpeedMultiplier => 2.5;
+
+  NooglerHat({
+    super.position,
+  });
+
+  final int activeLengthInMS = 5000;
+
+  @override
+  Future<void>? onLoad() async {
+    await super.onLoad();
+    sprite = await gameRef.loadSprite('game/noogler_hat.png');
+    size = Vector2(75, 50);
+  }
+}
+
+class Supergirl extends PowerUp {
+  // Add lines from here...
+  @override
+  double get jumpSpeedMultiplier => 5.5;
+
+  Supergirl({
+    super.position,
+  });
+  final int activeLengthInMS = 7000;
+
+  @override
+  Future<void>? onLoad() async {
+    await super.onLoad();
+    sprite = await gameRef.loadSprite('game/supergirl_left.png');
+    size = Vector2(120, 120);
+  }
+}
+
+class Spaceship extends PowerUp {
+  // Add lines from here...
+  @override
+  double get jumpSpeedMultiplier => 6.5;
+
+  Spaceship({
+    super.position,
+  });
+  final int activeLengthInMS = 8000;
+
+  @override
+  Future<void>? onLoad() async {
+    await super.onLoad();
+    sprite = await gameRef.loadSprite('game/alien_in_spaceship.png');
+    size = Vector2(120, 110);
+  }
+}
