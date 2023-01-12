@@ -83,8 +83,8 @@ class NormalPlatform extends Platform<NormalPlatformState> {
     'platform_phone_center': Vector2(100, 55),
     'platform_terminal': Vector2(110, 83),
     'platform_laptop': Vector2(100, 63),
-    'cheesy_planet': Vector2(150, 130),
-    'planet_mellows': Vector2(120, 100),
+    'cheesy_planet': Vector2(150, 140),
+    'planet_mellows': Vector2(120, 120),
   };
 
   @override

@@ -103,6 +103,10 @@ class ObjectManager extends Component with HasGameRef<DoodleDash> {
     specialPlatforms[specialty] = true;
   }
 
+  void disableSpecialty(String specialty) {
+    specialPlatforms[specialty] = false;
+  }
+
   void enableLevelSpecialty(int level) {
     // More on Platforms: Add switch statement to enable SpringBoard for
     // level 1 and BrokenPlatform for level 2
@@ -115,12 +119,16 @@ class ObjectManager extends Component with HasGameRef<DoodleDash> {
         break;
       case 3:
         enableSpecialty('noogler');
-        enableSpecialty('supergirl');
+
         break;
       case 4:
+        disableSpecialty('spring');
         enableSpecialty('rocket');
+        enableSpecialty('supergirl');
         break;
       case 5:
+        disableSpecialty('noogler');
+        disableSpecialty('spring');
         enableSpecialty('enemy');
         enableSpecialty('spaceship');
         break;
